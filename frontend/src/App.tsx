@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from './components/ui/tabs';
 import { ScrollArea } from './components/ui/scroll-area';
 import { Separator } from './components/ui/separator';
 import { Plus, Video, Users, Trash2 } from 'lucide-react';
+import './App.css';
 
 interface Session {
   id: string;

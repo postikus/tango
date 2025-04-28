@@ -101,7 +101,9 @@ function App() {
   };
 
   const connectWebSocket = (sessionId: string) => {
-    const ws = new WebSocket(`ws://${API_URL.replace('http://', '')}/ws/${sessionId}`);
+    const protocol = API_URL.startsWith('https://') ? 'wss://' : 'ws://';
+    const host = API_URL.replace(/^https?:\/\//, '');
+    const ws = new WebSocket(`${protocol}${host}/ws/${sessionId}`);
 
     ws.onopen = () => {
       console.log('WebSocket connected');

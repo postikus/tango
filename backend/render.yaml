@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: tango-clone-backend
+    env: go
+    buildCommand: go build -o main .
+    startCommand: ./main
+    envVars:
+      - key: PORT
+        value: 8080
